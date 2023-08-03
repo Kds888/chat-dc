@@ -19,7 +19,12 @@ def chatbot(request):
         response['Access-Control-Allow-Origin'] = '*'
         return response
     else:
-        response = JsonResponse({'bot_response': 'Get Requests Not Allowed.'})
+        body_bytes = request.body
+        body_str = body_bytes.decode('utf-8')
+        body_dict = json.loads(body_str)
+        message = body_dict.get('message')
+        bot_response = process.process_input(message)
+        response = JsonResponse({'bot_response': bot_response})
         response['Access-Control-Allow-Origin'] = '*'
         return response
 
