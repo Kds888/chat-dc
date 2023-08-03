@@ -146,3 +146,8 @@ handler404='dcbot.views.handler404'
 CSRF_COOKIE_SECURE = False
 CSRF_COOKIE_HTTPONLY = False
 CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ORIGIN_WHITELIST = [
+    'https://chat-dc-production.up.railway.app',
+    # add other URLs as needed
+]
