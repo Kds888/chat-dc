@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('django_secret_key')
 DEBUG = True
 
 ALLOWED_HOSTS = ['.up.railway.app', '127.0.0.1'] #when we will have our custom domain name we will replace it by that domain name 
-
+CSRF_TRUSTED_ORIGINS = ['https://*.up.railway.app']
 
 # Application definition
 
