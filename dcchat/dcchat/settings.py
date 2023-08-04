@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('django_secret_key')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*'] #when we will have our custom domain name we will replace it by that domain name 
+ALLOWED_HOSTS = ['*.up.railway.app', '127.0.0.1'] #when we will have our custom domain name we will replace it by that domain name 
 
 
 # Application definition
